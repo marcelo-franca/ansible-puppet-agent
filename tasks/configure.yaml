@@ -1,0 +1,9 @@
+- name: Define a configuracao do Puppet Agent para Debian
+  when: ansible_os_family == "Debian"
+  template:
+    src: puppet.conf.j2
+    dest: /etc/puppetlabs/puppet/puppet.conf
+    owner: root
+    group: root
+    mode: 0644
+  tags: puppetagent 

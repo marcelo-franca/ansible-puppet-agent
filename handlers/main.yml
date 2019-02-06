@@ -1,0 +1,11 @@
+---
+# handlers file for puppet-agent
+- name: Start Puppet Agent
+  systemd: 
+    name: puppet
+    state: started
+    enabled: yes
+- name: Restart Puppet Agent
+  systemd: 
+    name: puppet
+    state: restarted
