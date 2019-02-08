@@ -1,4 +1,6 @@
 ---
+- name: Importa depositorios do puppet agent
+  import_tasks: import_repo.yaml
 - name: Define instalacao do puppet agent
   import_tasks: install.yaml
 - name: Configura o puppet agent

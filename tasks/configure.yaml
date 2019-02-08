@@ -1,5 +1,5 @@
-- name: Define a configuracao do Puppet Agent para Debian
-  when: ansible_os_family == "Debian"
+- name: Define a configuracao do Puppet Agent
+  #when: ansible_os_family == "Debian"
   template:
     src: puppet.conf.j2
     dest: /etc/puppetlabs/puppet/puppet.conf
