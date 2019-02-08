@@ -9,8 +9,8 @@ Requirements
 Role Variables
 --------------
 Variables that are in defaults/main.yml, It has the variables:
-  **environmentname** *Eg: testing, production, homolog. According your server configuration.*
-  **puppetserver** *Eg: puppetserver.mafrait.com.br*
+  - environmentname Eg: testing, production, homolog. According your server configuration.*
+  - puppetserver Eg: puppetserver.mafrait.com.br*
 Dependencies
 ------------
 
