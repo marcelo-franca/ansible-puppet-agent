@@ -6,4 +6,14 @@
     owner: root
     group: root
     mode: 0644
-  tags: puppetagent 
+  notify:
+    - Restart Puppet Agent
+  tags: puppetagent
+- name: "Allow Puppet ports"
+  when: ansible_os_family == "RedHat"
+  firewalld:
+   port: 8139-8140/tcp
+   permanent: yes
+   state: enabled
+   immediate: yes
+  tags: puppetagent
