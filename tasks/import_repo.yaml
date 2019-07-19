@@ -2,13 +2,13 @@
 - name: Importa repositorio do Puppet no Debian 9
   when: ansible_os_family == "Debian"
   apt:
-   deb: https://apt.puppetlabs.com/puppet5-release-stretch.deb
+   deb: https://apt.puppetlabs.com/{{ puppet_release }}
    update_cache: yes
    state: present
   tags: puppetagent
 - name: Importa repositorio do Puppet no RedHat/CentOS 7
   when: ansible_os_family == "RedHat"
   yum:
-   name: https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
+   name: "https://yum.puppet.com/{{ puppet_release }}"
    state: present
   tags: puppetagent
