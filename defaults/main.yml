@@ -1,5 +1,6 @@
 ---
 # defaults file for puppet-agent
+run_interval: 5m
 environmentname: production
-puppetserver: puppetserver.mafrait.com.br
+puppetserver: lppsp1001.uckg.us
 puppet_release: puppet6-release-el-7.noarch.rpm
